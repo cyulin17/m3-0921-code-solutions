@@ -16,7 +16,7 @@ const doubled = numbers.map(multiplied);
 console.log('Multiplied by 2', doubled);
 
 const price = number => {
-  const formatted = '$' + number.toFixed(2).toString();
+  const formatted = '$' + number.toFixed(2);
   return formatted;
 };
 
