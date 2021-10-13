@@ -19,13 +19,7 @@ class CustomButton extends React.Component {
   }
 }
 
-const element = (
-  <div>
-    <CustomButton />
-  </div>
-);
-
 ReactDom.render(
-  element,
+  <CustomButton />,
   document.querySelector('#root')
 );
