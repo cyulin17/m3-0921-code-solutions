@@ -1,0 +1,42 @@
+#root {
+  position: absolute;
+  left: 45%;
+  top: 10%;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 45px;
+  height: 22px;
+  background-color: rgb(106, 168, 79);
+  border-radius: 60px;
+  transition: 0.2s;
+}
+
+.button::after {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border-radius: 100%;
+}
+
+.text {
+  display: inline-block;
+  vertical-align: 5px;
+  margin-left: 15px;
+  font-weight: 600;
+}
+
+.off {
+  background-color: rgb(226, 226, 226);
+}
+
+.off::after {
+  left: 23px;
+}
