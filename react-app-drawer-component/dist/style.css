@@ -1,0 +1,60 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+ul {
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-left: 30px;
+  padding: 30px;
+}
+
+ul li {
+  list-style-type: none;
+  margin: 0;
+}
+
+a {
+  display: block;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0;
+  margin-top: 15px;
+}
+
+li:hover {
+  background-color: rgba(199, 199, 199, 0.2);
+}
+
+.shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menuBar {
+  margin: 15px 0 0 20px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.drawer {
+  position: fixed;
+  width: 380px;
+  height: 100%;
+  background-color: #fff;
+  transition: ease-in 0.5s;
+}
+
+.drawer.opened {
+  transform: translate(0);
+}
+
+.drawer.closed {
+  transform: translate(-380px);
+}
