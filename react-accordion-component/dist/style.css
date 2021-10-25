@@ -1,0 +1,33 @@
+#root {
+  position: absolute;
+  top: 10%;
+  left: 35%;
+}
+
+.header {
+  width: 350px;
+  height: 30px;
+  border-left: 1px solid rgb(0, 0, 0);
+  border-right: 1px solid rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(0, 0, 0);
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgb(190, 190, 190, 0.5);
+}
+
+.content {
+  width: 350px;
+  border-left: 1px solid rgb(0, 0, 0);
+  border-right: 1px solid rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(0, 0, 0);
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.item:first-child {
+  border-top: 1px solid rgb(0, 0, 0);
+}
