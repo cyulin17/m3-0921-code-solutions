@@ -5,14 +5,12 @@ class Accordion extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isClicked: false,
       id: null
     };
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(id) {
-
     if (this.state.id === id) {
       this.setState({
         id: null
@@ -22,11 +20,6 @@ class Accordion extends React.Component {
         id: id
       });
     }
-
-    this.setState(prevState => ({
-      isClicked: !prevState.isClicked
-    }));
-
   }
 
   render() {
