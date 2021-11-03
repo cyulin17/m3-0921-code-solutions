@@ -19,7 +19,7 @@ class Carousel extends React.Component {
     } else {
       this.setState({ currentId: this.state.currentId + 1 });
     }
-    this.componentDidMount();
+    this.timerReset();
   }
 
   previousImg() {
@@ -29,7 +29,7 @@ class Carousel extends React.Component {
     } else {
       this.setState({ currentId: this.state.currentId - 1 });
     }
-    this.componentDidMount();
+    this.timerReset();
   }
 
   circleClick(id) {
@@ -37,10 +37,17 @@ class Carousel extends React.Component {
     if (this.state.currentId !== id) {
       this.setState({ currentId: id });
     }
-    this.componentDidMount();
+    this.timerReset();
   }
 
   componentDidMount() {
+    this.timer = setInterval(
+      () => this.nextImg(),
+      3000
+    );
+  }
+
+  timerReset() {
     this.timer = setInterval(
       () => this.nextImg(),
       3000
@@ -60,8 +67,8 @@ class Carousel extends React.Component {
     return (
       <div>
         {carousel}
-        <a href="#" onClick={this.previousImg}><i className='fas fa-chevron-circle-left'></i></a>
-        <a href="#" onClick={this.nextImg}><i className='fas fa-chevron-circle-right'></i></a>
+        <a href="#" onClick={this.previousImg}><i className='left-arrow fas fa-chevron-circle-left'></i></a>
+        <a href="#" onClick={this.nextImg}><i className='right-arrow fas fa-chevron-circle-right'></i></a>
         <ul>{button}</ul>
       </div>
     );
