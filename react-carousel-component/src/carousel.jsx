@@ -19,7 +19,7 @@ class Carousel extends React.Component {
     } else {
       this.setState({ currentId: this.state.currentId + 1 });
     }
-    this.timerReset();
+    this.startTimer();
   }
 
   previousImg() {
@@ -29,7 +29,7 @@ class Carousel extends React.Component {
     } else {
       this.setState({ currentId: this.state.currentId - 1 });
     }
-    this.timerReset();
+    this.startTimer();
   }
 
   circleClick(id) {
@@ -37,17 +37,14 @@ class Carousel extends React.Component {
     if (this.state.currentId !== id) {
       this.setState({ currentId: id });
     }
-    this.timerReset();
+    this.startTimer();
   }
 
   componentDidMount() {
-    this.timer = setInterval(
-      () => this.nextImg(),
-      3000
-    );
+    this.startTimer();
   }
 
-  timerReset() {
+  startTimer() {
     this.timer = setInterval(
       () => this.nextImg(),
       3000
