@@ -1,0 +1,47 @@
+#root {
+  position: relative;
+  left: 20%;
+  width: 800px;
+  height: 500px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.hidden {
+  display: none;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+ul li {
+  list-style: none;
+  margin: 0 5px;
+  font-size: 30px;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  margin-left: 30px;
+  font-size: 2em;
+  color: black;
+}
+
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-right: 30px;
+  font-size: 2em;
+  color: black;
+}
